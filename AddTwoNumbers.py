@@ -25,3 +25,11 @@ class Solution(object):
                 l3.next = ListNode(0)
                 l3 = l3.next
         return head
+
+    
+#TODO: what if the linked numbers are not in reversed order?  
+
+#Solution:
+
+class Solution(object):
+    def addTwoNumbers(self, l1, l2):
