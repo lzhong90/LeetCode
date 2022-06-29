@@ -26,3 +26,33 @@ class Solution(object):
             else:
                 return r
         return r  
+    
+    
+   ####Method 2#####
+    dic = {}
+    r = []
+    lp = len(p)
+    ls = len(s)
+    
+    for i in p:
+        if i in dic:
+            dic[i] += 1
+        else:
+            dic[i]  = 1
+    
+    for j in s[0:lp]:
+        if j in p:
+            dic[j] -= 1
+    
+    for c in range(0, ls-lp+1):
+        if all(value == 0 for value in dic.values()):
+            r.append(c)
+         
+        if s[c] in p:
+            dic[s[c]] += 1
+        if c+lp < ls:
+            if s[c+lp] in p:
+                dic[s[c+lp]] -= 1
+        else:
+            return r
+     return r
