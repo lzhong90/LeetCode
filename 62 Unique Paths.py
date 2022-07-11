@@ -5,6 +5,7 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
+        # Cannot be: arr = [[0]*n]*m, because if so python only allocate 1 memory space for the whole row and whole column!!!!!!!
         arr = [[0 for i in range(n)] for i in range(m)]
    
         
