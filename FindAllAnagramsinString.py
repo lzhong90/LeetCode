@@ -46,7 +46,7 @@ class Solution(object):
     
     for c in range(0, ls-lp+1):
         if all(value == 0 for value in dic.values()):
-            r.append(c)
+            r.append(s[c])
          
         if s[c] in p:
             dic[s[c]] += 1
