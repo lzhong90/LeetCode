@@ -18,7 +18,9 @@ class Solution(object):
         l = self.minDepth(root.left) 
         r = self.minDepth(root.right)
         
+        # if one of the subtree is empty, ignore it
         if l == 0: return r+1
         if r == 0: return l+1
         
+        # return the minimum value when it is not 0
         return min(l,r)+1
