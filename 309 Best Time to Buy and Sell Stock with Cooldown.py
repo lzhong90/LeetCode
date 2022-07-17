@@ -5,6 +5,7 @@ class Solution:
         # hold[i] = max(hold[i-1], rest[i-1] - price)
         # sold[i] = hold[i-1] + price
         # rest[i] = max(sold[i-1], rest[i-1])
+        # 
         
         
         
@@ -19,4 +20,6 @@ class Solution:
             rest[i] = max(sold[i-1], rest[i-1])
         
         return max(sold[l], rest[l])
+    
+    # Space can be optimized
             
